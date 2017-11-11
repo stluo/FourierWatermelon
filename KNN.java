@@ -19,7 +19,6 @@ public class classifier{
         }
         //Cosine similarity
         if (type == 1){
-            //Assumes not all 0
             double ab = 0;
             double a2 = 0;
             double b2 = 0;
@@ -28,16 +27,15 @@ public class classifier{
                 a2 += a[i]*a[i];
                 b2 += b[i]*b[i];
             } 
-            sum = ab/(Math.sqrt(a2*b2));
+            //Solve divide by 0 vectors by mapping 0 to 1 (not sure how legit this is)
             if (a2==0){
-                if (b2==0){
-                    sum = 1;
-                }
+                a2=1;
             }
+            if(b2==0){
+                b2=1;
+            }
+            sum = 1-ab/(Math.sqrt(a2*b2));
             //Make it so lower number means more similar
-            else{
-                sum = 1-sum;
-            }
         }
         return sum;
     };
