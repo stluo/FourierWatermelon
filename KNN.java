@@ -8,10 +8,6 @@ public class classifier{
         double k = temp.KNN(input,data,classes,3);
         System.out.println(k);
     }
-
-    /**
-    *Simple Euclidean distance
-    **/
     
     public int dist(int[] a, int[] b){
         int sum = 0;
@@ -42,10 +38,9 @@ public class classifier{
             //Loop through our history of closest points
             for(int j = 0;j<n;j++){
                 //If new data point is closer, replace and shift rest of history
-                if (distance<dist[j]){
+                if (distance<=dist[j]){
                     //Go backwards through array updating entries
-                    //Is it n-j-1???
-                    for(int k = 1;k<n-j-1;k++){
+                    for(int k = 1;k<n-j;k++){
                         ind[n-k] = ind[n-k-1];
                         dist[n-k] = dist[n-k-1];
                     }
@@ -60,6 +55,9 @@ public class classifier{
         int sum = 0;
         for (int i = 0;i<n;i++){
             sum+=classes[ind[i]];
+        }
+        for (int i =0;i<3;i++){
+            System.out.println(ind[i]);
         }
         //Take average
         double output = (double)sum/n;
