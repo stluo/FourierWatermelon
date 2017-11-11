@@ -9,10 +9,35 @@ public class classifier{
         System.out.println(k);
     }
     
-    public int dist(int[] a, int[] b){
-        int sum = 0;
-        for(int i=0; i < a.length; i++){
-            sum = sum + (a[i]-b[i])*(a[i]-b[i]);
+    public double dist(int[] a, int[] b, int type){
+        double sum = 0;
+        //Euclidean
+        if (type == 0){
+            for(int i=0; i < a.length; i++){
+                sum = sum + (a[i]-b[i])*(a[i]-b[i]);
+            } 
+        }
+        //Cosine similarity
+        if (type == 1){
+            //Assumes not all 0
+            double ab = 0;
+            double a2 = 0;
+            double b2 = 0;
+            for(int i=0; i < a.length; i++){
+                ab += a[i]*b[i];
+                a2 += a[i]*a[i];
+                b2 += b[i]*b[i];
+            } 
+            sum = ab/(Math.sqrt(a2*b2));
+            if (a2==0){
+                if (b2==0){
+                    sum = 1;
+                }
+            }
+            //Make it so lower number means more similar
+            else{
+                sum = 1-sum;
+            }
         }
         return sum;
     };
@@ -23,18 +48,19 @@ public class classifier{
     
     public double KNN(int[] input, int[][] data, int[] classes,int n){
         int[] ind = new int[n];
-        int[] dist = new int[n];
+        double[] dist = new double[n];
     
         //Initialize distances to max possible
         //May need to change to different type
         for (int i = 0;i<n;i++){
-            dist[i] = Integer.MAX_VALUE;
+            dist[i] = Double.MAX_VALUE;
         }
     
         //Run through each element of data
         for(int i = 0; i < data.length;i++){
             //Calculate distance between new point and data
-            int distance = dist(input,data[i]);
+            //1 = cosine sim, 0 = euclidean dist
+            double distance = dist(input,data[i],1);
             //Loop through our history of closest points
             for(int j = 0;j<n;j++){
                 //If new data point is closer, replace and shift rest of history
@@ -63,4 +89,5 @@ public class classifier{
         double output = (double)sum/n;
         return output;
     };
+}
 }
