@@ -4,15 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.steven.watermelon.MainActivity">
+    android:background="@drawable/pink"
+    tools:context="com.example.steven.watermelon.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/textNumber"
+        android:layout_width="78dp"
+        android:layout_height="75dp"
+        android:background="@android:color/background_light"
+        android:text="87%"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
+    <Button
+        android:id="@+id/record"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="58dp"
+        android:layout_height="63dp"
+        android:autoText="true"
+        android:background="@drawable/recorderoutline"
+        android:elevation="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <TextView
+        android:id="@+id/badWatermelon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello can you hear me?!"
+        android:layout_marginBottom="62dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="213dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumber"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
