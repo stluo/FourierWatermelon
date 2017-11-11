@@ -1,8 +1,8 @@
 public class classifier{
 
     public static void main(String[] args){
-        int[] input = new int[5];
-        int[][] data = new int[5][5];
+        int[] input = {1,2,3,4,5};
+        int[][] data = {{2,4,6,8,10},{2,4,6,8,9},{2,3,5,5,6},{2,3,6,5,6},{2,3,4,5,6}};
         int[] classes = {1,2,3,4,5};
         classifier temp = new classifier();
         double k = temp.KNN(input,data,classes,3);
