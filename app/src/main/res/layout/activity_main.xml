@@ -20,22 +20,6 @@
         app:layout_constraintVertical_bias="0.167"
         app:srcCompat="@drawable/popup" />
 
-    <TextView
-        android:id="@+id/textNumber"
-        android:layout_width="78dp"
-        android:layout_height="75dp"
-        android:background="@android:color/background_light"
-        android:text="87%"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
-
     <Button
         android:id="@+id/record"
         style="@style/Widget.AppCompat.Button.Borderless"
@@ -81,20 +65,20 @@
 
     <ImageView
         android:id="@+id/displaysweetness"
-        android:layout_width="136dp"
-        android:layout_height="141dp"
+        android:layout_width="157dp"
+        android:layout_height="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189"
+        app:layout_constraintVertical_bias="0.192"
         app:srcCompat="@drawable/popp" />
 
     <ImageView
         android:id="@+id/displaywater"
-        android:layout_width="139dp"
-        android:layout_height="147dp"
+        android:layout_width="157dp"
+        android:layout_height="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.934"
@@ -105,7 +89,7 @@
         app:srcCompat="@drawable/popp" />
 
     <Button
-        android:id="@+id/correct"
+        android:id="@+id/incorrect"
         android:layout_width="136dp"
         android:layout_height="141dp"
         android:background="@drawable/slicesad"
@@ -117,7 +101,7 @@
         app:layout_constraintVertical_bias="0.91" />
 
     <Button
-        android:id="@+id/incorrect"
+        android:id="@+id/correct"
         android:layout_width="136dp"
         android:layout_height="141dp"
         android:background="@drawable/slicehappy"
@@ -127,5 +111,100 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.91" />
+
+
+    <TextView
+        android:id="@+id/waterlable"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        android:text="Juicy"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/sweetlable"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        android:text="Sweet"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/sweetnumber"
+        android:layout_width="141dp"
+        android:layout_height="90dp"
+        android:background="@android:color/transparent"
+        android:text="75%"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <TextView
+        android:id="@+id/waternumber"
+        android:layout_width="129dp"
+        android:layout_height="90dp"
+        android:background="@android:color/transparent"
+        android:text="87%"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/lablesweet"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="46dp"-->
+        <!---->
+        <!--android:ems="10"-->
+        <!--android:inputType="none"-->
+        <!--android:text="Sweet"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.88"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.443" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/lableswater"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="46dp"-->
+
+        <!--android:ems="10"-->
+        <!--android:inputType="none"-->
+        <!--android:text="Juicy"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.271"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.443" />-->
 
 </android.support.constraint.ConstraintLayout>
