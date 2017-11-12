@@ -19,17 +19,23 @@ public class classifier{
         classes.add(3);
         classes.add(4);
         classes.add(5);
-        classifier temp = new classifier(data,classes);
-        int k = temp.KNN(input);
-        System.out.println(k);
+        classifier temp = new classifier(data,classes,classes);
+        int[] k = temp.KNN(input);
+        System.out.println(k[0]);
+        System.out.println(k[1]);
+        temp.update(input,k[0],k[1]);
+        System.out.println(temp.data);
+        System.out.println(temp.classes);
     }
     List<List<Double>> data = new ArrayList<>();
     List<Integer> classes = new ArrayList<>();
+    List<Integer> classes2 = new ArrayList<>();
     int n = 0;
 
-    classifier(List<List<Double>> d,List<Integer> c){  
+    classifier(List<List<Double>> d,List<Integer> c,List<Integer> c2){  
         this.data = d;  
-        this.classes = c;  
+        this.classes = c;
+        this.classes2 = c2;
         if (this.data.size()<4){
             n = this.data.size();
         }
@@ -38,13 +44,14 @@ public class classifier{
         }
     }
 
-    public void update(double[] input,int c){
+    public void update(double[] input,int c,int c2){
         List<Double> temp = new ArrayList<>();
         for (int i = 0;i<input.length;i++){
             temp.add(input[i]);
         }
         this.data.add(temp);
         this.classes.add(c);
+        this.classes2.add(c2);
     }
     
     public double dist(List<Double> a, double[] b, int type){
@@ -82,7 +89,7 @@ public class classifier{
     *Extremely simple KNN on untransformed data
     **/
     
-    public int KNN(double[] input){
+    public int[] KNN(double[] input){
         int[] ind = new int[n];
         double[] dist = new double[n];
     
@@ -114,15 +121,17 @@ public class classifier{
             }
         }
         //Given history, construct sum of response for closest neighbors
-        int sum = 0;
+        int sum1 = 0;
+        int sum2 = 0;
         for (int i = 0;i<n;i++){
-            sum+=this.classes.get(ind[i]);
+            sum1+=this.classes.get(ind[i]);
+            sum2+=this.classes2.get(ind[i]);
         }
         for (int i =0;i<3;i++){
             System.out.println(ind[i]);
         }
         //Take average
-        int output = sum/n;
+        int[] output = {sum1/n,sum2/n};
         return output;
     };
 }
