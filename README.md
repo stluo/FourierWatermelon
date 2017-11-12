@@ -1,6 +1,6 @@
 # FourierWatermelon
 
-<img src="https://github.com/stluo/FourierWatermelon/blob/master/23555423_10212906989342806_1946067151_o.png" width="200"><img src="https://github.com/stluo/FourierWatermelon/blob/master/23558050_10212907160747091_1647842561_o.png" width="200">
+<img src="https://github.com/stluo/FourierWatermelon/blob/master/23555423_10212906989342806_1946067151_o.png" width="400"><img src="https://github.com/stluo/FourierWatermelon/blob/master/23558050_10212907160747091_1647842561_o.png" width="400">
 
 
 
