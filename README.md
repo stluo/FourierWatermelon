@@ -1,9 +1,8 @@
 # FourierWatermelon
 
-Inline-style: 
+I 
 ![alt text](https://github.com/stluo/FourierWatermelon/blob/master/23555423_10212906989342806_1946067151_o.png "Logo Title Text 1")
 
-Inline-style: 
 ![alt text](https://github.com/stluo/FourierWatermelon/blob/master/23558050_10212907160747091_1647842561_o.png "Logo Title Text 1")
 
 
